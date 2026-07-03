@@ -152,7 +152,16 @@
   @media (prefers-reduced-motion:reduce){ .reveal{opacity:1;transform:none;transition:none;} }
   a.skip{position:absolute;left:-9999px;}
   a.skip:focus{left:16px;top:16px;position:fixed;background:var(--bg);color:var(--forest);padding:10px 16px;border-radius:4px;z-index:50;border:1px solid var(--line);}
-</style></head>
+
+  /* italic-accent-fix: 2026-07-03 */
+  /* Italic display accents use Times New Roman. Playfair Display italic capitals (Q, J, Z) render poorly. */
+  h1 em, h2 em, h3 em, h4 em, h5 em, h6 em,
+  .section-title em, .nextband h2 em, .w-hero h2 em, .offramp h2,
+  .pull, .letter-quote, .kelsie-note-text, .opt__no {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-style: italic;
+  }
+  </style></head>
 <body>
 <a class="skip" href="#start">Skip to guide</a>
 
